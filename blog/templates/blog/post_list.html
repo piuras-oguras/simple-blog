@@ -5,10 +5,21 @@
     <title>Blog o pieskach</title>
 </head>
 <body>
+    <h1>"Hau hau" - pimpuś</h1>
     <div id = 'menu'>
 
 
     </div>
-    <h1>"Hau hau" - pimpuś</h1>
+    <div id = 'posts'>
+        {% for post in posts %}
+        <p>Opublikowany:{{ post.published_date}}</p>
+        <p>{{ post.title }}</p>
+        {{ post.text|linebreaksbr }}
+        {% endfor %}
+    </div>
+{% comment %}
+<p>Lista postów</p>
+{% endcomment %}
+
 </body>
 </html>
